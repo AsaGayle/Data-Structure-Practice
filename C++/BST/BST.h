@@ -4,15 +4,16 @@
 using namespace std;
 
 class Node;
-class LinkedList{
+class BST{
 private:
     Node *root;
-
 public:
-    LinkedList();
-    ~LinkedList();//Destructor
+    BST();
+    ~BST();//Destructor
     void addNode(int data);
     void addVector(vector<int> &arr);
-    void traverseList();
+    void traverseBST(Node *root);
+    void dfs(int num);
+    void bfs(int num);
     Node *get_root();
 };
