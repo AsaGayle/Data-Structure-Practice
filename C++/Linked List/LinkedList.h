@@ -14,5 +14,4 @@ public:
     void addNode(int data);
     void addVector(vector<int> &arr);
     void traverseList();
-    Node *get_root();
 };
