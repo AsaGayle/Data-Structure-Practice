@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <fstream>
 #include "BST.h"
 #include "Node.h"
 
@@ -8,6 +9,7 @@ using namespace std;
 int main(){
 	BST testBST;
 	int testData;
+	ifstream 
 	vector<int> positiveVector;
 
 	while(testData != -1){
