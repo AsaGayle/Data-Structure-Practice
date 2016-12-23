@@ -3,16 +3,14 @@
 #include "LinkedList.h"
 #include "Node.h"
 
-using namespace std;
-
 int main(){
 	LinkedList testList;
 	int testData;
-	vector<int> positiveVector;
+	std::vector<int> positiveVector;
 
 	while(testData != -1){
-		cout << "Please enter an integer: ";
-		cin >> testData;
+		std::cout << "Please enter an integer: ";
+		std::cin >> testData;
 		if(testData != -1){positiveVector.push_back(testData);}
 	}
 	testList.addVector(positiveVector);

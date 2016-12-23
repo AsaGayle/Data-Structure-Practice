@@ -39,7 +39,7 @@ void BST::addNode(int nData){
     }
 }
 
-void BST::addVector(vector<int> &arr){
+void BST::addVector(std::vector<int> &arr){
     for(int i=0; i<arr.size(); i++){
         addNode(arr[i]);
     }
@@ -51,7 +51,7 @@ void BST::traverseBST(Node *root){
     }
     traverseBST(root->left);
     traverseBST(root->right);
-    cout << root->data << endl;
+    std::cout << root->data << std::endl;
 }
 
 void BST::search(int num){
@@ -72,9 +72,9 @@ void BST::search(int num){
     }
 
     if(found == true){
-        cout << "Number is in tree";
+        std::cout << "Number is in tree" << std::endl;
     } else {
-        cout << "Number not found in tree";
+        std::cout << "Number not found in tree" << std::endl;
     }
 }
 

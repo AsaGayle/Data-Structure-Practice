@@ -25,7 +25,7 @@ void LinkedList::addNode(int nData){
     }
 }
 
-void LinkedList::addVector(vector<int> &arr){
+void LinkedList::addVector(std::vector<int> &arr){
     for(int i=0; i<arr.size(); i++){
         addNode(arr[i]);
     }
@@ -34,7 +34,7 @@ void LinkedList::addVector(vector<int> &arr){
 void LinkedList::traverseList(){
     Node *current = root;
     while(current != NULL){
-        cout << current->data << endl;
+        std::cout << current->data << std::endl;
         current = current->next;
     }
 }

@@ -17,7 +17,7 @@ Stack::Stack(int input_size){
 };
 
 Stack::~Stack(){
-    
+
 }
 //
 void Stack::push(int nData){
@@ -25,15 +25,15 @@ void Stack::push(int nData){
         Node* new_node = new Node(nData);
         new_node->next = root;
         root = new_node;
-        cout << "PUSHED " << nData << endl;
+        std::cout << "PUSHED " << nData << std::endl;
 
     } else if(size_defined == false){
         Node* new_node = new Node(nData);
         new_node->next = root;
         root = new_node;
-        cout << "PUSHED " << nData << endl;
+        std::cout << "PUSHED " << nData << std::endl;
     } else {
-        cout << "ERROR: Stack size exceeded. Can not push data to stack" << endl;
+        std::cout << "ERROR: Stack size exceeded. Can not push data to stack" << std::endl;
     }
 }
 

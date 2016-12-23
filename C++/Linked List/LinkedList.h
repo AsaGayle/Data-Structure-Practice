@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 #include <vector>
-using namespace std;
 
 class Node;
 class LinkedList{
@@ -12,6 +11,6 @@ public:
     LinkedList();
     ~LinkedList();//Destructor
     void addNode(int data);
-    void addVector(vector<int> &arr);
+    void addVector(std::vector<int> &arr);
     void traverseList();
 };
