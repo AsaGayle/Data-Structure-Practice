@@ -13,5 +13,6 @@ public:
     void addNode(int data);
     void addVector(vector<int> &arr);
     void traverseBST(Node *root);
+    void search(int num);
     Node *get_root();
 };

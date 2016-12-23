@@ -54,6 +54,30 @@ void BST::traverseBST(Node *root){
     cout << root->data << endl;
 }
 
+void BST::search(int num){
+    Node* current = root;
+    bool found = false;
+    while(current != NULL){
+        if(current->data == num){
+            found = true;
+            current = NULL;
+        }else{
+            if(current->data < num){
+                current = current->right;
+            } else{
+                current = current->left;
+            }
+        }
+
+    }
+
+    if(found == true){
+        cout << "Number is in tree";
+    } else {
+        cout << "Number not found in tree";
+    }
+}
+
 Node* BST::get_root(){
     return root;
 }
