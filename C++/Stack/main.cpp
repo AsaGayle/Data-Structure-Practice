@@ -4,8 +4,15 @@
 #include "Stack.h"
 #include "Node.h"
 
+#define DEBUG 1
+#if DEBUG
+    #define LOG(x) std::cout << x << std::endl;
+#else
+    #define LOG(x)
+#endif
+
 int main(){
-    Stack testStack;
+    Stack testStack = Stack(10);
     int testData = 0;
     std::vector<int> v;
 
@@ -16,6 +23,7 @@ int main(){
             std::cout << "Please enter an integer: ";
             std::cin >> testData;
             if(testData >= 0){
+                LOG(testData);
                 v.push_back(testData);
                 count++;
             }
@@ -26,8 +34,13 @@ int main(){
         }
 
     } else{
-
+        if(testStack.empty()){
+            std::cout << "true" << std::endl;
+        } else {
+            std::cout << "false" << std::endl;
+        }
     }
 
+    delete testStack;
     return 0;
 }

@@ -2,8 +2,8 @@
 #include "Node.h"
 
 LinkedList::LinkedList(){
-    root = new Node();
-    root = NULL;
+    this->root = new Node();
+    this->root = NULL;
 }
 
 LinkedList::~LinkedList(){
@@ -14,7 +14,7 @@ void LinkedList::addNode(int nData){
     Node *new_node = new Node(nData);
 
     if(root == NULL){
-        root = new_node;
+        this->root = new_node;
         return;
     } else{
         Node *current = root;

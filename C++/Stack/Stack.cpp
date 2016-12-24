@@ -5,13 +5,14 @@
 Stack::Stack(){
     root = new Node();
     root = NULL;
+    this->size_defined = false;
 };
 
 //Creates stack with set size
 Stack::Stack(int input_size){
     root = new Node();
     root = NULL;
-    size = input_size;
+    this->size = input_size;
     size_defined = true;
     cur_size = 0;
 };
@@ -19,7 +20,7 @@ Stack::Stack(int input_size){
 Stack::~Stack(){
 
 }
-//
+
 void Stack::push(int nData){
     if(size_defined == true && cur_size < size){
         Node* new_node = new Node(nData);
@@ -39,4 +40,10 @@ void Stack::push(int nData){
 
 int Stack::top(){
     return root->data;
+}
+
+bool Stack::empty(){
+    bool isempty;
+    root == NULL ? isempty = true : isempty = false;
+    return isempty;
 }

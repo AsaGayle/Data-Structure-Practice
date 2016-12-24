@@ -2,8 +2,8 @@
 #include "Node.h"
 
 BST::BST(){
-    root = new Node();
-    root = NULL;
+    this->root = new Node();
+    this->root = NULL;
 }
 
 BST::~BST(){
@@ -13,7 +13,7 @@ void BST::addNode(int nData){
     Node *new_node = new Node(nData);
 
     if(root == NULL){
-        root = new_node;
+        this->root = new_node;
         return;
     } else{
         Node *current = root;
